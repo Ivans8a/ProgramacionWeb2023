@@ -30,7 +30,7 @@ let greetMe2 = () => console.log("Hello from the function expression")
 greetMe2()
 logGreeting(greetMe);
 
-//¿?
+//funcion flecha
 let mifuncion = () => {
 
 }

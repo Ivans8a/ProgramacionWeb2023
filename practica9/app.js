@@ -1,6 +1,7 @@
-const express = require("express");
-const app = express();
+const express = require("express"); //importacion de dependencia
+const app = express();// declaramos app de express
 
+//ruta raiz
 app.get("/", (req, res) => {
     res.send (`<!DOCTYPE html>
     <html lang="en">
@@ -19,7 +20,9 @@ app.get("/", (req, res) => {
     </html>`)
 });
 
-app.listen(3000);
+app.listen(3000);//poner a la escucha el server, es decir, levantarlo
+
+//ruta /uno
 app.get("/uno", (req, res) => {
     res.send("Hello world from route one")
 })

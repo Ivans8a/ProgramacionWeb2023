@@ -12,6 +12,6 @@ app.get('/', (req, res) => {
 
 //mongo db conecction
 mongoose
-.connect(process.env.MONGODB_URI)
-.then(()=>console.log('Conected to mongo db atlas'))
-.catch((error) => console.log(error));
+.connect(process.env.MONGODB_URI) //variable de entorno
+.then(()=>console.log('Conected to mongo db atlas')) //succsesfully conected
+.catch((error) => console.log(error));//error conecction

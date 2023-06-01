@@ -5,14 +5,14 @@ let Person= require('../models/person');//requerimiento del modelo de persona
 
 router.get('/gente', async (req, res)=>{    //ruta para obtener todas las personas
     const Persons = await Person.find({});
-    res.render('person.ejs', { Persons });
+    res.json(Persons);
 })
 
 router.get('/addPerson', (req, res)=>{ //ruta para agregar una persona
     res.render('addPerson');
 });
 
-router.post('addPerson.ejs', (req, res)=>{ //ruta para agregar una persona
+router.post('addPerson', (req, res)=>{ //ruta para agregar una persona
     const newPerson = new Person({
         nombre: req.body.nombre,
         edad: req.body.edad,

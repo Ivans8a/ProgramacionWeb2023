@@ -8,7 +8,7 @@
 <body>
     <h1>Agregar estudiante:</h1>
     
-    <form action="/addPerson" method="POST">
+    <form action="/findById/:id" method="POST">
         <label for="nss">NSS:</label>
         <input type="text" id="nss" name="nss"><br></br>
         <label for="nombre">Nombre:</label>
@@ -17,6 +17,8 @@
         <input type="text" id="edad" name="edad">
         <label for="tipoSangre">Tipo de sangre:</label>
         <input type="text" id="tipoSangre" name="tipoSangre">
+        <label for="objId">ID:</label>
+        <input type="text" id="objId" name="objId">
 
         <input type="submit" value="Submit">
     </form>

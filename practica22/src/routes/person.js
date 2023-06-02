@@ -42,4 +42,11 @@ router.post('/updatePerson', (req, res) => { // Ruta para procesar el formulario
         .catch((error) => { res.json({ message: error }) });
 });
 
+
+router.get('/deletePerson/:id',(req,res)=>{ // Manejador de la ruta GET '/deletePerson/:id'
+    Person.findByIdAndDelete(req.params.id) 
+    .then((data)=>{res.redirect('/gente')}) 
+    .catch((error)=>{res.json({message:error})}); 
+});
+
 module.exports=router;  //exportar las rutas
